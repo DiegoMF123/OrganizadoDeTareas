@@ -754,12 +754,12 @@ public function correlativo(){
       $data["guardar"] = $this->model_solicitud->guardartsoli($tiposoli,$numsoli,$tiposolid,$desc,$fecha,$idusuario);
       $data["guardar"] = $this->model_solicitud->guardarsopcon($tiposoporte,$numsoporte,$telefono,$email,$rs);
 
-    header("Location:  http://192.168.0.9:8888/LabLaBendicion/index.php/mantenimientomm/nuevoprueba?response=1");
+    header("Location:  http://192.168.0.9:8888/OrganizadoDeTareas/index.php/mantenimientomm/nuevoprueba?response=1");
       die();
     }
 
     else {
-      header("Location:  http://192.168.0.9:8888/LabLaBendicion/index.php/mantenimientomm/nuevoprueba?response=2");
+      header("Location:  http://192.168.0.9:8888/OrganizadoDeTareas/index.php/mantenimientomm/nuevoprueba?response=2");
       die();
       }
 
@@ -975,7 +975,7 @@ public function updatedata(){
             // La variable "datos" que esta con letras color verde, viene del foreach que traslada los datos del formulario de la vista edtarpda, y las variables con signo $ son las que mandas a traer arriba
               $data["datosoli"]= $this->model_solicitud->updatestadodos($id,$estado,$fechamodifi,$observaciones);
 
-              header("Location: http://192.168.0.9:8888/LabLaBendicion/index.php/mantenimientomm/modificarestadodos?response=1");
+              header("Location: http://192.168.0.9:8888/OrganizadoDeTareas/index.php/mantenimientomm/modificarestadodos?response=1");
                           die();
 
                         }
@@ -1014,7 +1014,7 @@ public function delete(){
   $fechaeliminacion = date('d-m-Y H:i:s');
   $data["datosoli"]= $this->model_solicitud->eliminarsolicitud($id,$fechaeliminacion,$ip);
 
-  header("Location: http://192.168.0.9:8888/LabLaBendicion/index.php/mantenimientomm?response=1");
+  header("Location: http://192.168.0.9:8888/OrganizadoDeTareas/index.php/mantenimientomm?response=1");
               die();
 
             }
@@ -1081,7 +1081,7 @@ public function delete(){
             // La variable "datos" que esta con letras color verde, viene del foreach que traslada los datos del formulario de la vista edtarpda, y las variables con signo $ son las que mandas a traer arriba
               $data["datosmuestra"]= $this->Model_Muestra->asociaritems($codigomuestra,$cbox1,$cbox2,$cbox3,$cbox4,$fechamodifi);
 
-              header("Location: http://192.168.0.9:8888/LabLaBendicion/index.php/mantenimientomm/asociar?response=1");
+              header("Location: http://192.168.0.9:8888/OrganizadoDeTareas/index.php/mantenimientomm/asociar?response=1");
                           die();
 
                         }
@@ -1149,7 +1149,7 @@ public function delete(){
             // La variable "datos" que esta con letras color verde, viene del foreach que traslada los datos del formulario de la vista edtarpda, y las variables con signo $ son las que mandas a traer arriba
               $data["datosmuestra"]= $this->Model_Muestra->deasociaritems($codigomuestra,$fechamodifi,$cbox1,$cbox2,$cbox3,$cbox4);
 
-              header("Location: http://192.168.0.9:8888/LabLaBendicion/index.php/mantenimientomm/desasociar?response=1");
+              header("Location: http://192.168.0.9:8888/OrganizadoDeTareas/index.php/mantenimientomm/desasociar?response=1");
                           die();
 
                         }

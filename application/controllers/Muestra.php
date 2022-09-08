@@ -124,7 +124,7 @@ class Muestra extends CI_Controller{
      }
 
        $this->Model_Muestra->guardar($tipodemuestra,$presentacion,$cantunid,$unidadmed,$fecha,$nombre,$tamanio,$tipo,$id);
-       header("Location: http://192.168.0.9:8888/LabLaBendicion/index.php/muestra/nuevo?response=1");
+       header("Location: http://192.168.0.9:8888/OrganizadoDeTareas/index.php/muestra/nuevo?response=1");
 
 
       }
@@ -205,12 +205,12 @@ foreach ($data as $key) {
  if(empty($usuario)){
 
    $data["guardar"] = $this->Model_Muestra->guardar($tipodemuestra,$presentacion,$cantunid,$unidadmed,$fecha,$nombre);
-   header("Location: http://192.168.0.9:8888/LabLaBendicion/index.php/muestra/nuevo?response=1");
+   header("Location: http://192.168.0.9:8888/OrganizadoDeTareas/index.php/muestra/nuevo?response=1");
    die();
  }
 
  else {
-   header("Location:  http://192.168.0.9:8888/LabLaBendicion/index.php/muestra/nuevo");
+   header("Location:  http://192.168.0.9:8888/OrganizadoDeTareas/index.php/muestra/nuevo");
    die();
    }
 
@@ -262,7 +262,7 @@ foreach ($data as $key) {
         $fechadeeliminacion = date('d-m-Y H:i:s');
         $data["datosmuestra"] = $this->Model_Muestra->delete($id,$ipelim,$fechadeeliminacion);
 
-        header("Location: http://192.168.0.9:8888/LabLaBendicion/index.php/muestra?responsemuestra=1");
+        header("Location: http://192.168.0.9:8888/OrganizadoDeTareas/index.php/muestra?responsemuestra=1");
         die();
 
 }

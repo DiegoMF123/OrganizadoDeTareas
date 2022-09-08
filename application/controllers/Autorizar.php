@@ -118,7 +118,7 @@ public function updatedata(){
 //y las variables con signo $ son las que mandas a traer arriba, donde tambíen se carga el modelo y la función del modelo
   $data["estado"]= $this->Model_Muestra->documentoautorizar($id,$estado,$fechamodifi);
   // Si se cumple la condición nos redireccionará a la siguiente url
-  header("Location: http://192.168.0.9:8888/LabLaBendicion/index.php/Autorizar/autorizardoc?response=1");
+  header("Location: http://192.168.0.9:8888/OrganizadoDeTareas/index.php/Autorizar/autorizardoc?response=1");
               die();
 
             }

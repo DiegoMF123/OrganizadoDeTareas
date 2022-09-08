@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bienvenido al sistema</title>
-        <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/img/">
+        <link rel="shortcut icon" >
         <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700" rel="stylesheet">
         <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,400" rel="stylesheet">
         <link href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -218,7 +218,7 @@
 
                                          <i class="fa fa-briefcase"></i>
 
-                                         <span class="menu-title">Mantenimiento</span>
+                                         <span class="menu-title">Tablero</span>
 
                                          <i class="arrow"></i>
 
@@ -228,7 +228,7 @@
 
                                          <ul class="collapse">
 
-                                             <li><a href="<?php echo base_url(); ?>index.php/mantenimientomm"><i class="fa fa-caret-right"></i>Análisis de muestras medicas / Clasificación / Mantenimiento</a></li>
+                                             <li><a href="<?php echo base_url(); ?>index.php/mantenimientomm"><i class="fa fa-caret-right"></i>Iniciar Nuevo Tablero</a></li>
 
                                          </ul>
 
@@ -305,7 +305,7 @@
 
 
              <div class="hide-fixed pull-right pad-rgt">Actualmente v1.0</div>
-             <p class="pad-lft">&#0169; 2021 Sistema Laboratorio "La Bendición S.A"</p>
+             <p class="pad-lft">&#0169; 2022 Sistema Organizador de tareas "BoardApp S.A"</p>
          </footer>
 
 
