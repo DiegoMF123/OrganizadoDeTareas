@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html>
 <head>
 	<title>Login BoardApp</title>
-	<link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/img/logo1.ico">
+	<link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/img/Ico2.ico">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style2.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
@@ -41,7 +41,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
            		    	<input type="password" class="input" name="Password">
             	   </div>
             	</div>
-            	<a href="#">Restaurar Contraseña</a>
+            	<a href="<?php echo base_url(); ?>index.php/welcome/restablecer">Restablecer Contraseña</a>
+				<a href="<?php echo base_url(); ?>index.php/users/nuevos">Crear cuenta</a>
             	<input type="submit" class="btn" value="Entrar" name="Entrar">
             </form>
         </div>

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bienvenido</title>
-        <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/img/logo1.ico">
+        <title>Bienvenido al sistema</title>
+        <link rel="shortcut icon" >
         <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700" rel="stylesheet">
         <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,400" rel="stylesheet">
         <link href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +19,6 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="<?php echo base_url(); ?>/assets/plugins/pace/pace.min.css" rel="stylesheet">
         <script src="<?php echo base_url(); ?>/assets/plugins/pace/pace.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
         <!-- scropt para Dar color a la tabla en la parte de los encabezados -->
         <style type="text/css">
@@ -26,6 +27,7 @@
           background-color: #EAEDED;
           border: 5px solid black;
           width: 100%;
+
         }
 
         </style>
@@ -39,18 +41,13 @@
 
       <div id="container" class="effect mainnav-sm navbar-fixed mainnav-fixed">
 
-
          <header id="navbar">
 
              <div id="navbar-container" class="boxed">
 
-
-
                  <div class="navbar-content clearfix">
 
                      <ul class="nav navbar-top-links pull-left">
-
-
 
                          <li class="tgl-menu-btn">
 
@@ -58,43 +55,64 @@
 
                          </li>
 
-
-
                      </ul>
 
                      <ul class="nav navbar-top-links pull-right">
-
-
 
                          <li class="hidden-xs" id="toggleFullscreen">
 
                              <a class="fa fa-expand" data-toggle="fullscreen" href="#" role="button">
 
-                          <span class="sr-only">Toggle fullscreen</span>
+                             <span class="sr-only">Toggle fullscreen</span>
 
                              </a>
+
                          </li>
+
+
+
                          <li id="dropdown-user" class="dropdown">
+
                              <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
-                               <!--Abrimos llaves de php para poder llamar el tipo de variable session PARA llamar
-                                el campo nombre que es el que se muestra en la vista, "parte superior derecha donde indica
-                                el nombre del usuario que se ha logeado"-->
-                                 <div class="username hidden-xs"> <?php echo $_SESSION["nombre"]; ?></div>
+
+                                       <!--Abrimos llaves de php para poder llamar el tipo de variable session PARA llamar
+                                        el campo nombre que es el que se muestra en la vista, "parte superior derecha donde indica
+                                        el nombre del usuario que se ha logeado"-->
+
+                                 <div class="username hidden-xs"> Bienvenido: <?php echo $_SESSION["nombre"]; ?></div>
+
                              </a>
+
                              <div class="dropdown-menu dropdown-menu-right with-arrow">
 
+
                                  <ul class="head-list">
+
                                      <li>
+
                                        <!-- Boton que sirve para poder redireccionar a la vista del login, cuando el usuario quiera salir, en este caso la funcion esta en el controlador
                                      welcome y la funcion se llama salir -->
+
                                            <a href="<?php echo base_url(); ?>index.php/welcome/salir"> <i class="fa fa-sign-out fa-fw"></i> Salir </a>
+
                                      </li>
+
                                  </ul>
+
                              </div>
+
                          </li>
+
+
+
                      </ul>
+
                  </div>
+
+
+
              </div>
+
          </header>
 
 
@@ -105,26 +123,23 @@
 
                  <div class="pageheader hidden-xs">
 
-                     <h3><i class="fa fa-home"></i>Bienvenido Usuario Jefe</h3>
+                     <h3><i class="fa fa-home"></i> TABLERO </h3>
+
+
                  </div>
+
+
+
                  <div id="page-content">
                     <div class="row">
                           <div class="col-md-12">
                      <div class="panel">
-
                          <div class="panel-heading">
-
-                             <h3 class="panel-title">Jefe</h3>
+                             <h3 class="panel-title">Listado de tareas</h3>
                          </div>
-                             <center><img src="<?php echo base_url(); ?>/assets/img/logo.png" width="1000" ></center>
+
                          <div class="panel-body">
-
-
-                             <br>
-                           <br>
-
-
-
+                           <center><img src="" width="1000" ></center>
                          </div>
 
                      </div>
@@ -148,9 +163,9 @@
 
                      <a href="<?php echo base_url(); ?>" class="navbar-brand">
 
+                         <!--Llamada  de imagen para el menú de nuestras vistas-->
 
-
-                           <i><img src="<?php echo base_url(); ?>/assets/img/logo1.png" width="60"> <font size="5" face="georgia">Menú Lab</font></i>
+                           <i><img src="<?php echo base_url(); ?>/assets/img/LogoApp.png" width="60" height="60"> <font size="5" face="georgia">Menú BRP </font></i>
 
 
 
@@ -190,7 +205,7 @@
 
                                          <ul class="collapse">
 
-                                             <li><a href="<?php echo base_url(); ?>index.php/welcome"><i class="fa fa-caret-right"></i>Pantalla De Inicio</a></li>
+                                             <li><a href="<?php echo base_url(); ?>index.php/welcome"><i class="fa fa-caret-right"></i>Pantalla Principal</a></li>
 
                                          </ul>
 
@@ -203,7 +218,7 @@
 
                                          <i class="fa fa-briefcase"></i>
 
-                                         <span class="menu-title">Opciones</span>
+                                         <span class="menu-title">Tablero</span>
 
                                          <i class="arrow"></i>
 
@@ -213,13 +228,14 @@
 
                                          <ul class="collapse">
 
-                                           <li><a href="<?php echo base_url(); ?>index.php/Autorizar"><i class="fa fa-caret-right"></i>Autorizador De Documentos Para Muestras</a></li>
-
-                                          <li><a href="<?php echo base_url(); ?>index.php/mantenimientomm"><i class="fa fa-caret-right"></i>Autorizar solicitudes</a></li>
+                                             <li><a href="<?php echo base_url(); ?>index.php/tablero"><i class="fa fa-caret-right"></i>Iniciar Nuevo Tablero</a></li>
 
                                          </ul>
 
                                      </li>
+
+
+
 
 
 
@@ -286,9 +302,10 @@
                  </ul>
 
              </div>
-             <div class="hide-fixed pull-right pad-rgt">Actualmente v1.0</div>
-             <p class="pad-lft">&#0169; 2021 Sistema Laboratorio "La Bendición S.A"</p>
 
+
+             <div class="hide-fixed pull-right pad-rgt">Actualmente v1.0</div>
+             <p class="pad-lft">&#0169; 2022 Sistema Organizador de tareas "BoardApp S.A"</p>
          </footer>
 
 
