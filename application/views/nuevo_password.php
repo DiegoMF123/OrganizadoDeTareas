@@ -30,7 +30,7 @@
 <body>
   <nav class="navbar navbar-light" style="background-color: #0055C3;">
     <!-- Navbar content -->
-    <a class="navbar-brand" href="#" style="color: white">RapiTrans GT</a>
+    <a class="navbar-brand" href="#" style="color: white">BoardApp GT</a>
   </nav>
   <br>
   <br>

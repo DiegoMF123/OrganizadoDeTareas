@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear tablero</title>
-    <link rel="shortcut icon">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/img/Ico2.ico">
     <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,400" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -337,7 +337,7 @@
                         <!--Llamada  de imagen para el menú de nuestras vistas-->
 
                         <i><img src="<?php echo base_url(); ?>/assets/img/LogoApp.png" width="60" height="60">
-                            <font size="5" face="georgia">Menú BRP </font>
+                            <font size="5" face="georgia">Menú BRP</font>
                         </i>
 
 

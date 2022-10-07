@@ -7,11 +7,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuevo tablero</title>
-    <link rel="shortcut icon">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/img/Ico2.ico">
     <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,400" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/style.css" rel="stylesheet">
+    <script language="JavaScript" type="text/javascript" src="<?php echo base_url(); ?>assets/js/validarTablero.js">
+    </script>
     <link href="<?php echo base_url(); ?>/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/plugins/switchery/switchery.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
@@ -20,7 +22,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/plugins/pace/pace.min.css" rel="stylesheet">
     <script src="<?php echo base_url(); ?>/assets/plugins/pace/pace.min.js"></script>
-
+   
 
     <!-- scropt para Dar color a la tabla en la parte de los encabezados -->
     <style type="text/css">
@@ -176,8 +178,8 @@
                                                     // code...
                                                 ?>
 
-                                                    <option value="<?= $listaEstados->id_estado?>">
-                                                        <?= $listaEstados->descripcion_estado?>
+                                                    <option value="<?= $listaEstados->id_estado ?>">
+                                                        <?= $listaEstados->descripcion_estado ?>
                                                     </option>
 
                                                 <?php    } ?>
