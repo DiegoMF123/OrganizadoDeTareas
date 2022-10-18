@@ -44,13 +44,13 @@
 
             <td align="left">
                 <br>
-                <h1 align="left">Muy buenas tardes, este es un correo de confirmación para formar parte del nuevo tablero al cual usted ha sido invitado</h1>
+                <h1 align="left">Muy buen día estimado usuario, este es un correo de confirmación para formar parte del nuevo tablero al cual usted ha sido invitado</h1>
 
                 <u>
                     <p style="color: #333333;" aling="left">
 
 
-                        Su codigo link de confirmación es: <b>Link de confirmación<a target="_blank" href="www.google.com"><img
+                        Su codigo link de confirmación es: <b><a target="_blank" href="<?php echo base_url(); ?>index.php/users/nuevos">Link de confirmación<img
                                 src="https://imagizer.imageshack.com/img924/8497/CduhsP.png" width="100"
                                 align="right"></a> </p>
                 </u>

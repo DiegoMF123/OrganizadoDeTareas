@@ -24,7 +24,7 @@
                                 <tbody>
                                     <tr>
                                         <br>
-                                        <a target="_blank"><img src="https://imagizer.imageshack.com/img922/107/AISSTY.png" width="300" align="center"></a>
+                                        <a target="_blank"><img src="" width="300" align="center"></a>
 
                                     </tr>
                                 </tbody>

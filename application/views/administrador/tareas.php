@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear tablero</title>
+    <title>Tareas</title>
     <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/img/Ico2.ico">
     <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,400" rel="stylesheet">
@@ -20,13 +20,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/plugins/pace/pace.min.css" rel="stylesheet">
     <script src="<?php echo base_url(); ?>/assets/plugins/pace/pace.min.js"></script>
-    <script language="JavaScript" type="text/javascript" src="<?php echo base_url(); ?>assets/js/validar.js"> </script>
-
-
-    <!-- sweert aleet -->
-    <script src="<?php echo base_url(); ?>assets/js/sweetalert2.all.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/sweetalert2.min.css">
 
     <!-- scropt para Dar color a la tabla en la parte de los encabezados -->
     <style type="text/css">
@@ -38,25 +31,14 @@
         }
     </style>
 
-    <script type="text/javascript">
-        function confirmar() {
-            event.preventDefault();
+    <script>
+        $("#sortable8").sortable({
+            items: "li:not(.ui-state-disabled)"
+        });
 
-            Swal.fire({
-                title: '¿Está seguro de enviar el correo a esta dirección?',
-                type: 'warning',
-                showCancelButton: true,
-                confirmButtonText: 'Si',
-                cancelButtonText: "No",
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-            }).then((result) => {
-                if (result.value) {
-                    document.registrationForm.submit();
-                }
-                return false;
-            })
-        }
+        $("#sortable9").sortable({
+            cancel: ".ui-state-disabled"
+        });
     </script>
 
 
@@ -150,7 +132,7 @@
 
                 <div class="pageheader hidden-xs">
 
-                    <h3><i class="fa fa-home"></i> Listado de tableros </h3>
+                    <h3><i class="fa fa-home"></i> Organizador de tareas </h3>
 
 
                 </div>
@@ -162,19 +144,18 @@
                         <div class="col-md-12">
                             <div class="panel">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Tableros</h3>
+                                    <h3 class="panel-title">Tareas</h3>
                                 </div>
 
-
-                                <a href="<?php echo base_url(); ?>index.php/tablero/nuevoTablero"><button type="button" class="btn btn-primary">+ CREAR</button></a>
+                                <a href="<?php echo base_url(); ?>index.php/tareas/nuevaTarea"><button type="button" class="btn btn-primary">+ CREAR TAREA</button></a>
 
 
                                 <div class="panel-body">
 
-                                <?php if ($response == "1") {
+                                    <?php if ($response == "1") {
                                         echo "<div class=\"alert alert-primary fade in\" role=\"alert\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">
-                                                      Se envió el correo correctamente
-                                                    </div>";
+                      Se creó la tarea correctamente
+                    </div>";
                                     } ?>
 
                                     <table class="table table-striped table-bordered">
@@ -196,10 +177,10 @@
 
                                         <tbody align="center">
                                             <!--abrimos llaves php para poder llamar los datos que queremos mostrar en nuestra vista
-                                    de los puntos de atención existentes, comenzamos un foreach y en este caso declaramos una variable
-                                  llamada datos que es la que llamaremos en nuestro controlador pda en la funcion index, luego del as
-                                tenemos otra variable dato que es la que vamos a usar para poder mandar a llamar los campos que queremos mostrar de la base de datos por
-                              parte de nuestro modelo igualmente en la funcion index -->
+    de los puntos de atención existentes, comenzamos un foreach y en este caso declaramos una variable
+  llamada datos que es la que llamaremos en nuestro controlador pda en la funcion index, luego del as
+tenemos otra variable dato que es la que vamos a usar para poder mandar a llamar los campos que queremos mostrar de la base de datos por
+parte de nuestro modelo igualmente en la funcion index -->
                                             <?php
                                             foreach ($datosTablero as $tablero) {
                                                 // code..
@@ -230,10 +211,8 @@
 
                                                             <ul class="dropdown-menu">
 
-                                                                <li> <a href="" data-toggle="modal" data-target="#myModal4" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="right" title="Enviar invitación"><span class="material-icons">contact_page</span></a></li>
-
-                                                                <li> <a href="<?php echo base_url(); ?>index.php/tareas" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="right" title="Asignar tareas"><span class="material-icons">contact_page</span></a></li>
-
+                                                                <li> <a href="<?php echo base_url(); ?>index.php/tareas/listarTareas" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="right" title="Asignar lista de tareas"><span class="material-icons">contact_page</span></a></li>
+                                                                <li> <a href="<?php echo base_url(); ?>index.php/tareas/listarTareas" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="right" title="Asignar lista de actividades"><span class="material-icons">contact_page</span></a></li>
                                                             </ul>
 
 
@@ -320,7 +299,12 @@
 
                     </div>
 
+
                 </div>
+
+
+
+
 
 
 
@@ -338,7 +322,7 @@
                         <!--Llamada  de imagen para el menú de nuestras vistas-->
 
                         <i><img src="<?php echo base_url(); ?>/assets/img/LogoApp.png" width="60" height="60">
-                            <font size="5" face="georgia">Menú BRP</font>
+                            <font size="5" face="georgia">Menú BRP </font>
                         </i>
 
 

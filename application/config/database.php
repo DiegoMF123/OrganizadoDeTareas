@@ -71,13 +71,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 //Conexion a base de datos local
-/*
+
 $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '192.168.0.8',
+	'hostname' => '192.168.1.5',
 	'username' => 'toor',
 	'password' => 'dsmf',
 	'database' => 'gestor_tareas',
@@ -96,9 +96,9 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-*/
 
 
+/*
 //Conexion a base de datos remota
 $active_group = 'default';
 $query_builder = TRUE;
@@ -124,4 +124,4 @@ $db['default'] = array(
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
-);
+);*/
