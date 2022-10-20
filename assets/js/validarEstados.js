@@ -5,18 +5,18 @@ $(document).ready(function(){
         var errores = '';
 
 
-        if( $('#usuario').val() == '' ){
-            errores += '<p>Seleccione un usuario para asignación</p>';
-            $('#usuario').css("border-bottom-color", "#F14B4B")
+        if( $('#estadoTarea').val() == '' ){
+            errores += '<p>Seleccione un estado para la tarea</p>';
+            $('#estadoTarea').css("border-bottom-color", "#F14B4B")
         } else{
-            $('#usuario').css("border-bottom-color", "#d1d1d1")
+            $('#estadoTarea').css("border-bottom-color", "#d1d1d1")
         }
 
-        if( $('#asignarTarea').val() == '' ){
-            errores += '<p>Seleccione una tarea ha asignar</p>';
-            $('#asignarTarea').css("border-bottom-color", "#F14B4B")
+        if( $('#porcentajeTarea').val() == '' ){
+            errores += '<p>Seleccione un porcentaje de avance de su tarea</p>';
+            $('#porcentajeTarea').css("border-bottom-color", "#F14B4B")
         } else{
-            $('#asignarTarea').css("border-bottom-color", "#d1d1d1")
+            $('#porcentajeTarea').css("border-bottom-color", "#d1d1d1")
         }
 
 

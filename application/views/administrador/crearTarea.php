@@ -27,7 +27,7 @@
     <link href="<?php echo base_url(); ?>/assets/plugins/pace/pace.min.css" rel="stylesheet">
     <script src="<?php echo base_url(); ?>/assets/plugins/pace/pace.min.js"></script>
     <script src="<?php echo base_url(); ?>/assets/js/jquery.min.js"></script>
-    <script language="JavaScript" type="text/javascript" src="<?php echo base_url(); ?>assets/js/validarusu.js">
+    <script language="JavaScript" type="text/javascript" src="<?php echo base_url(); ?>assets/js/validarTarea.js">
     </script>
     <link href="<?php echo base_url(); ?>assets/css/est.css" rel="stylesheet">
     <script src="<?php echo base_url(); ?>assets/js/sweetalert2.all.js"></script>
@@ -78,7 +78,7 @@
             event.preventDefault();
 
             Swal.fire({
-                title: '¿Está seguro que desea crear el usuario?',
+                title: '¿Está seguro que desea crear la tarea?',
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Si',
@@ -185,7 +185,7 @@
                                             } ?>
 
                                             <!--Formulario que sirve para poder realizar la filtracion por regiones de un nuevo usuario-->
-                                            <form id="formulario" name="formulario" class="form-horizontal" action="guardardos" method="GET" onsubmit="return confirmar()">
+                                            <form id="formulario" name="formulario" class="form-horizontal" action="guardar" method="GET" onsubmit="return confirmar()">
 
 
 
@@ -193,7 +193,7 @@
 
                                                     <label class="col-md-1 col-xs-12 control-label">Descipción tarea</label>
                                                     <div class="col-md-3 col-xs-12">
-                                                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese Nombre de la tarea" required />
+                                                        <input type="text" class="form-control" name="tarea" id="tarea" placeholder="Ingrese Nombre de la tarea" required />
                                                     </div>
 
 
@@ -225,7 +225,9 @@
                                                         <div class="col-md-5 col-xs-12">
                                                             <!--  Boton guardar, y guardar los datos y mandar los datos a modificar ingresados al controlador -->
                                               
-                                                            <a href="<?php echo base_url(); ?>index.php/tareas/guardar" type="button" class="btn btn-primary" onclick="limpiarFormulario()">Guardar</a>
+                                                            
+                                                            <input  type="submit" class="btn btn-primary" name="btnSend" value="Guardar" id="btnSend">
+                                                        
                                                             <!--  Boton Cancelar los datos y direccionar a la vista donde se muestran el listado de usuarios creados-->
                                                             <!--llamamos el Script que esta arriba con un onclick para que puedar realizar la validacion del mismo-->
                                                             <a href="<?php echo base_url(); ?>index.php/tareas" type="button" class="btn btn-danger" onclick="limpiarFormulario()">Cancelar</a>

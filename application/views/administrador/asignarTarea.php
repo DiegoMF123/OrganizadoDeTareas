@@ -78,7 +78,7 @@
             event.preventDefault();
 
             Swal.fire({
-                title: '¿Está seguro que desea crear el usuario?',
+                title: '¿Está seguro que desea asignar la tarea a este usuario?',
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Si',
@@ -185,7 +185,7 @@
                                             } ?>
 
                                             <!--Formulario que sirve para poder realizar la filtracion por regiones de un nuevo usuario-->
-                                            <form id="formulario" name="formulario" class="form-horizontal" action="guardardos" method="GET" onsubmit="return confirmar()">
+                                            <form id="formulario" name="formulario" class="form-horizontal" action="guardarTarea" method="GET" onsubmit="return confirmar()">
 
 
 
@@ -193,7 +193,7 @@
 
                                                     <label class="col-md-2 col-xs-12 control-label">Usuario</label>
                                                     <div class="col-md-3 col-xs-12">
-                                                        <select class="form-control" name="tipoTablero" id="tipoTablero" required />
+                                                        <select class="form-control" name="usuario" id="usuario" required />
                                                         <option value="" hidden selected>Seleccione una usuario</option>
                                                         <option value="">Diego Mijangos</option>
                                                         <option value="">Angeles Estrada</option>
@@ -205,7 +205,7 @@
 
                                                     <label class="col-md-2 col-xs-12 control-label">Asignar Tarea</label>
                                                     <div class="col-md-3 col-xs-12">
-                                                        <select class="form-control" name="tipoTablero" id="tipoTablero" required />
+                                                        <select class="form-control" name="asignarTarea" id="asignarTarea" required />
                                                         <option value="" hidden selected>Seleccione una usuario</option>
                                                         <option value="">Tarea 1</option>
                                                         <option value="">Tarea 2</option>
@@ -232,8 +232,7 @@
                                                     <div class="form-group">
                                                         <div class="col-md-5 col-xs-12">
                                                             <!--  Boton guardar, y guardar los datos y mandar los datos a modificar ingresados al controlador -->
-
-                                                            <a href="<?php echo base_url(); ?>index.php/tareas/guardarTarea" type="button" class="btn btn-primary" onclick="limpiarFormulario()">Guardar</a>
+                                                            <input  type="submit" class="btn btn-primary" name="btnSend" value="Guardar" id="btnSend">
                                                             <!--  Boton Cancelar los datos y direccionar a la vista donde se muestran el listado de usuarios creados-->
                                                             <!--llamamos el Script que esta arriba con un onclick para que puedar realizar la validacion del mismo-->
                                                             <a href="<?php echo base_url(); ?>index.php/tareas/asignarTareaUsuario" type="button" class="btn btn-danger" onclick="limpiarFormulario()">Cancelar</a>

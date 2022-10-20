@@ -5,20 +5,14 @@ $(document).ready(function(){
         var errores = '';
 
 
-        if( $('#usuario').val() == '' ){
-            errores += '<p>Seleccione un usuario para asignación</p>';
-            $('#usuario').css("border-bottom-color", "#F14B4B")
+        if( $('#tarea').val() == '' ){
+            errores += '<p>Ingrese un nombre para la tarea</p>';
+            $('#tarea').css("border-bottom-color", "#F14B4B")
         } else{
-            $('#usuario').css("border-bottom-color", "#d1d1d1")
+            $('#tarea').css("border-bottom-color", "#d1d1d1")
         }
 
-        if( $('#asignarTarea').val() == '' ){
-            errores += '<p>Seleccione una tarea ha asignar</p>';
-            $('#asignarTarea').css("border-bottom-color", "#F14B4B")
-        } else{
-            $('#asignarTarea').css("border-bottom-color", "#d1d1d1")
-        }
-
+        
 
 
         // ENVIANDO MENSAJE ============================
