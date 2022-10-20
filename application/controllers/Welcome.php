@@ -28,8 +28,8 @@ class Welcome extends CI_Controller
 					break;
 
 				case '2':
-					//$data["datosmuestra"] = $this->Model_Muestra->datosmuestra();
-					//$this->load->view('usuinterno/principal', $data);
+					$this->load->view('administrador/pantallaInicio');
+					break;
 					break;
 
 
@@ -42,7 +42,7 @@ class Welcome extends CI_Controller
 			}
 		} else {
 			// Si no se cumple, seguirá mostrando el login
-			header("Location: http://192.168.1.5:8888/OrganizadoDeTareas/");
+			header("Location: http://127.0.0.1:8888/OrganizadoDeTareas/");
 			die();
 		}
 	}
@@ -91,7 +91,7 @@ class Welcome extends CI_Controller
 					);
 					$this->session->set_userdata($newdata);
 					// Si se cumple el logeo y si existen el usuario y la contraseña, redireccionará a esta url
-					header("Location: http://192.168.1.5:8888/OrganizadoDeTareas/index.php/welcome");
+					header("Location: http://127.0.0.1:8888/OrganizadoDeTareas/index.php/welcome");
 					die();
 				} else {
 					echo "No puedes entrar";
@@ -113,7 +113,7 @@ class Welcome extends CI_Controller
 		// Cerramos la sesión
 		session_destroy();
 		// Nos redireccionará al login
-		header("Location: http://192.168.1.5:8888/OrganizadoDeTareas/");
+		header("Location: http://127.0.0.1:8888/OrganizadoDeTareas/");
 		die();
 	}
 

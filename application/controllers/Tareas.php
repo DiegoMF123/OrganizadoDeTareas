@@ -30,8 +30,9 @@ class Tareas extends CI_Controller
 					break;
 
 				case '2':
-					$data["datosmuestra"] = $this->Model_Muestra->datosmuestra();
-					$this->load->view('usuinterno/principal', $data);
+					$data["response"]=trim(isset($_REQUEST["response"]));
+					$data["datosTablero"] = $this->model_tablero->datosTablero();
+					$this->load->view('administrador/tareas', $data);
 					break;
 
 
@@ -45,7 +46,7 @@ class Tareas extends CI_Controller
 			}
 		} else {
 			// Si no se cumple, seguirá mostrando el login
-			header("Location: http://192.168.1.5:8888/OrganizadoDeTareas/");
+			header("Location: http://127.0.0.1:8888/OrganizadoDeTareas/");
 			die();
 		}
 	}
@@ -90,7 +91,7 @@ class Tareas extends CI_Controller
 			}
 		} else {
 			// Si no se cumple, seguirá mostrando el login
-			header("Location: http://192.168.1.5:8888/OrganizadoDeTareas/");
+			header("Location: http://127.0.0.1:8888/OrganizadoDeTareas/");
 			die();
 		}
 	}
@@ -119,8 +120,9 @@ class Tareas extends CI_Controller
 					break;
 
 				case '2':
-					$data["datosmuestra"] = $this->Model_Muestra->datosmuestra();
-					$this->load->view('usuinterno/principal', $data);
+					$data["listaEstados"] = $this->model_tablero->listaEstados();
+					$data["response"]=trim(isset($_REQUEST["response"]));
+					$this->load->view('administrador/listadoDeTareas', $data);
 					break;
 
 
@@ -134,7 +136,7 @@ class Tareas extends CI_Controller
 			}
 		} else {
 			// Si no se cumple, seguirá mostrando el login
-			header("Location: http://192.168.1.5:8888/OrganizadoDeTareas/");
+			header("Location: http://127.0.0.1:8888/OrganizadoDeTareas/");
 			die();
 		}
 	}

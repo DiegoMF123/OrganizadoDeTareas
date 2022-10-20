@@ -77,7 +77,7 @@ class Users extends CI_Controller
         $correo = trim($_REQUEST["correo"]);
         // si se cumple la funicón para poder guardar los datos, mandamos los respectivos  datos
         if (empty($usuario)) {
-            header("Location: http://192.168.1.5:8888/OrganizadoDeTareas");
+            header("Location: http://127.0.0.1:8888/OrganizadoDeTareas");
             die();
         } else {
 
@@ -85,7 +85,7 @@ class Users extends CI_Controller
             $this->send($correo);
             // El header es para poder decirle que si se ejecuta lo anterior cambia la url y le agrega la variable respose 1 que
             // es el mensaje de exito que se insertaron los datos
-            header("Location: http://192.168.1.5:8888/OrganizadoDeTareas/index.php/users/nuevos?response=1");
+            header("Location: http://127.0.0.1:8888/OrganizadoDeTareas/index.php/users/nuevos?response=1");
             die();
         }
     }
@@ -112,7 +112,7 @@ class Users extends CI_Controller
 
         $enviar = $this->load->view('plantilla_creacionUsuario', $data, TRUE);
 
-        $this->email->from('boarapp@dtech.com.gt', 'BoardApp');
+        $this->email->from('boardapp@dtech.com.gt', 'BoardApp');
         $this->email->to($correouno);
         $this->email->subject('USUARIO CREADO CON EXITO');
         $this->email->message($enviar);

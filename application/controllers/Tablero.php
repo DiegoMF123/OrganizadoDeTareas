@@ -30,8 +30,9 @@ class Tablero extends CI_Controller
 					break;
 
 				case '2':
-					$data["datosmuestra"] = $this->Model_Muestra->datosmuestra();
-					$this->load->view('usuinterno/principal', $data);
+					$data["response"]=trim(isset($_REQUEST["response"]));
+					$data["datosTablero"] = $this->model_tablero->datosTablero();
+					$this->load->view('administrador/tablero', $data);
 					break;
 
 
@@ -45,7 +46,7 @@ class Tablero extends CI_Controller
 			}
 		} else {
 			// Si no se cumple, seguirá mostrando el login
-			header("Location: http://192.168.1.5:8888/OrganizadoDeTareas/");
+			header("Location: http://127.0.0.1:8888/OrganizadoDeTareas/");
 			die();
 		}
 	}
@@ -76,8 +77,9 @@ class Tablero extends CI_Controller
 					break;
 
 				case '2':
-					$data["datosmuestra"] = $this->Model_Muestra->datosmuestra();
-					$this->load->view('usuinterno/principal', $data);
+					$data["listaEstados"] = $this->model_tablero->listaEstados();
+					$data["response"]=trim(isset($_REQUEST["response"]));
+					$this->load->view('administrador/nuevoTablero', $data);
 					break;
 
 
@@ -91,7 +93,7 @@ class Tablero extends CI_Controller
 			}
 		} else {
 			// Si no se cumple, seguirá mostrando el login
-			header("Location: http://192.168.1.5:8888/OrganizadoDeTareas/");
+			header("Location: http://127.0.0.1:8888/OrganizadoDeTareas/");
 			die();
 		}
 	}
@@ -120,11 +122,11 @@ class Tablero extends CI_Controller
 
 			$data["guardar"] = $this->model_tablero->guardarTablero($nombTablero, $descTablero, $tipoTablero, $fecha, $usuarioAplicacion);
 
-			header("Location:  http://192.168.1.5:8888/OrganizadoDeTareas/index.php/tablero/nuevoTablero?response=1");
+			header("Location:  http://127.0.0.1:8888/OrganizadoDeTareas/index.php/tablero/nuevoTablero?response=1");
 			die();
 		} else {
 			//$data["guardar"] = $this->model_tablero->guardarTablero($nombTablero, $descTablero, $tipoTablero, $fecha, $usuario);
-			header("Location:  http://192.168.1.5:8888/OrganizadoDeTareas/index.php/tablero/nuevoTablero?response=1");
+			header("Location:  http://127.0.0.1:8888/OrganizadoDeTareas/index.php/tablero/nuevoTablero?response=1");
 			die();
 		}
 	}
@@ -150,10 +152,10 @@ class Tablero extends CI_Controller
 
 			$data["correoInvitadoCorreo"] = $this->solicitud_correo($correo);
 
-			header("Location:  http://192.168.1.5:8888/OrganizadoDeTareas/index.php/tablero?response=1");
+			header("Location:  http://127.0.0.1:8888/OrganizadoDeTareas/index.php/tablero?response=1");
 			die();
 		} else {
-			header("Location:  http://192.168.1.5:8888/OrganizadoDeTareas/index.php/tablero?response=2");
+			header("Location:  http://127.0.0.1:8888/OrganizadoDeTareas/index.php/tablero?response=2");
 			die();
 		}
 	}
