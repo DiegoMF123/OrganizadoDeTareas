@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Creacion de nuevo usuario</title>
+    <title>Comentarios de la tarea</title>
     <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/img/Ico2.ico">
 
     <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700" rel="stylesheet">
@@ -154,7 +154,7 @@
 
             <div id="content-container">
                 <div class="pageheader hidden-xs">
-                    <h3><i class="fa fa-home"></i> Creación de Tareas</h3>
+                    <h3><i class="fa fa-home"></i>Comentarios de las tareas</h3>
 
 
                 </div>
@@ -165,7 +165,7 @@
 
                             <div class="panel">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Datos de la nueva tarea</h3>
+                                    <h3 class="panel-title">Comentarios</h3>
                                 </div>
 
                                 <div class="panel">
@@ -180,7 +180,7 @@
                                           si los datos se actualizan y hacen bien su proceso en el controlador Users y en el respectivo modelo. -->
                                             <?php if ($response == "1") {
                                                 echo "<div class=\"alert alert-primary fade in\" role=\"alert\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">
-                                                      Se guardaron correctamente los datos de la nueva tarea
+                                                      Se ha agreagado el comentario a la tarea asignada
                                                     </div>";
                                             } ?>
 
@@ -191,30 +191,34 @@
 
                                                 <div class="form-group">
 
-                                                    <label class="col-md-1 col-xs-12 control-label">Descipción tarea</label>
+                                                    <label class="col-md-2 col-xs-12 control-label">Comentario de la tarea</label>
                                                     <div class="col-md-3 col-xs-12">
-                                                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese Nombre de la tarea" required />
+                                                    <textarea rows="6" maxlength="1000" id="mensaje"  name="desc" cols="80" placeholder="Escribe aqui tu mensaje" required></textarea>
+                                                    <div id="contador">Máximo de caracteres 0/1000</div>
+                                                    <!-- Contador y limitar letras en campo -->
+                                                      <script>
+                                                          const mensaje = document.getElementById('mensaje');
+                                                          const contador = document.getElementById('contador');
+                                                              mensaje.addEventListener('input', function(e) {
+                                                                  const target = e.target;
+                                                                  const longitudMax = target.getAttribute('maxlength');
+                                                                  const longitudAct = target.value.length;
+                                                                  contador.innerHTML = `${longitudAct}/${longitudMax}`;
+                                                              });
+                                                      </script>
+
                                                     </div>
 
-
-
+                                                    
 
 
                                                 </div>
 
 
-
                                                 <br>
 
 
                                                 <br>
-
-
-                                              
-
-                                         
-
-
 
 
                                                 <br>
@@ -224,11 +228,11 @@
                                                     <div class="form-group">
                                                         <div class="col-md-5 col-xs-12">
                                                             <!--  Boton guardar, y guardar los datos y mandar los datos a modificar ingresados al controlador -->
-                                              
-                                                            <a href="<?php echo base_url(); ?>index.php/tareas/guardar" type="button" class="btn btn-primary" onclick="limpiarFormulario()">Guardar</a>
+
+                                                            <a href="<?php echo base_url(); ?>index.php/tareas/guardarComentario" type="button" class="btn btn-primary" onclick="limpiarFormulario()">Guardar</a>
                                                             <!--  Boton Cancelar los datos y direccionar a la vista donde se muestran el listado de usuarios creados-->
                                                             <!--llamamos el Script que esta arriba con un onclick para que puedar realizar la validacion del mismo-->
-                                                            <a href="<?php echo base_url(); ?>index.php/tareas" type="button" class="btn btn-danger" onclick="limpiarFormulario()">Cancelar</a>
+                                                            <a href="<?php echo base_url(); ?>index.php/tareas/asignarTareaUsuario" type="button" class="btn btn-danger" onclick="limpiarFormulario()">Cancelar</a>
                                                         </div>
                                                     </div>
                                                 </div>

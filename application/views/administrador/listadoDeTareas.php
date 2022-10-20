@@ -283,22 +283,16 @@
                                 <div class="panel-body">
                                     <!-- Draggable Events -->
                                     <!-- ============================================ -->
-                                    <a href="<?php echo base_url(); ?>index.php/tablero/nuevoTablero"><button type="button" class="btn btn-primary">+ CREAR</button></a>
+
                                    <br>
                                    <br>
                                     <div id="demo-external-events">
-                                        <div class="fc-event">Lista de tarea 1</div>
-                                        <div class="fc-event">Lista de tarea 2</div>
-                                        <div class="fc-event">Lista de tarea 3</div>
-                                        <div class="fc-event">Lista de tarea 4</div>
-                                        <div class="fc-event">Lista de tarea 5</div>
-                                        <div class="fc-event">Lista de tarea 6</div>
+                                       <!-- <div class="fc-event">Tarea 1</div>-->
+                                        <!--<div class="fc-event">Tarea 2</div> -->
+                                        <!--<div class="fc-event">Tarea 3</div> -->
+                                        
                                         <hr>
-                                        <div>
-                                            <label class="form-checkbox form-normal form-primary">
-                                                <input type="checkbox" id="drop-remove">
-                                                Remove after drop </label>
-                                        </div>
+                                      
                                     </div>
                                     <!-- ============================================ -->
                                 </div>

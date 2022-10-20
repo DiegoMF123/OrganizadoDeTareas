@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Creacion de nuevo usuario</title>
+    <title>Cambio de estado y porcentaje de avance</title>
     <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/img/Ico2.ico">
 
     <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700" rel="stylesheet">
@@ -154,7 +154,7 @@
 
             <div id="content-container">
                 <div class="pageheader hidden-xs">
-                    <h3><i class="fa fa-home"></i> Creación de Tareas</h3>
+                    <h3><i class="fa fa-home"></i>Cambios de estado</h3>
 
 
                 </div>
@@ -165,7 +165,7 @@
 
                             <div class="panel">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Datos de la nueva tarea</h3>
+                                    <h3 class="panel-title">Datos de los estados</h3>
                                 </div>
 
                                 <div class="panel">
@@ -180,7 +180,7 @@
                                           si los datos se actualizan y hacen bien su proceso en el controlador Users y en el respectivo modelo. -->
                                             <?php if ($response == "1") {
                                                 echo "<div class=\"alert alert-primary fade in\" role=\"alert\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">
-                                                      Se guardaron correctamente los datos de la nueva tarea
+                                                      Se han actualizados los datos de la tarea
                                                     </div>";
                                             } ?>
 
@@ -191,30 +191,39 @@
 
                                                 <div class="form-group">
 
-                                                    <label class="col-md-1 col-xs-12 control-label">Descipción tarea</label>
+                                                    <label class="col-md-2 col-xs-12 control-label">Estado tarea</label>
                                                     <div class="col-md-3 col-xs-12">
-                                                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese Nombre de la tarea" required />
+                                                        <select class="form-control" name="tipoTablero" id="tipoTablero" required />
+                                                        <option value="" hidden selected>En curso</option>
+                                                        <option value="">Finalizado</option>
+                                                        <option value="">Con atraso</option>
+
+                                                        </select>
+
                                                     </div>
 
+                                                    <label class="col-md-2 col-xs-12 control-label">Porcentaje Tarea</label>
+                                                    <div class="col-md-3 col-xs-12">
+                                                        <select class="form-control" name="tipoTablero" id="tipoTablero" required />
+                                                        <option value="" hidden selected>0%</option>
+                                                        <option value="">20%</option>
+                                                        <option value="">40%</option>
+                                                        <option value="">60%</option>
+                                                        <option value="">80%</option>
+                                                        <option value="">100%</option>
 
+                                                        </select>
 
+                                                    </div>
 
 
                                                 </div>
 
 
-
                                                 <br>
 
 
                                                 <br>
-
-
-                                              
-
-                                         
-
-
 
 
                                                 <br>
@@ -224,11 +233,11 @@
                                                     <div class="form-group">
                                                         <div class="col-md-5 col-xs-12">
                                                             <!--  Boton guardar, y guardar los datos y mandar los datos a modificar ingresados al controlador -->
-                                              
-                                                            <a href="<?php echo base_url(); ?>index.php/tareas/guardar" type="button" class="btn btn-primary" onclick="limpiarFormulario()">Guardar</a>
+
+                                                            <a href="<?php echo base_url(); ?>index.php/tareas/guardarEstado" type="button" class="btn btn-primary" onclick="limpiarFormulario()">Guardar</a>
                                                             <!--  Boton Cancelar los datos y direccionar a la vista donde se muestran el listado de usuarios creados-->
                                                             <!--llamamos el Script que esta arriba con un onclick para que puedar realizar la validacion del mismo-->
-                                                            <a href="<?php echo base_url(); ?>index.php/tareas" type="button" class="btn btn-danger" onclick="limpiarFormulario()">Cancelar</a>
+                                                            <a href="<?php echo base_url(); ?>index.php/tareas/asignarTareaUsuario" type="button" class="btn btn-danger" onclick="limpiarFormulario()">Cancelar</a>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -162,9 +162,9 @@
                                         <!--El nombre de los campos que se van a mostrar en la vista-->
                                         <thead>
                                             <tr>
-                                                <th>ID TABLERO</th>
+                                                <th>ID TAREA</th>
 
-                                                <th>NOMBRE TABLERO</th>
+                                                <th>DESCRIPCIÓN TAREA</th>
 
                                                 <th>FECHA CREACIÓN</th>
 
@@ -190,11 +190,11 @@ parte de nuestro modelo igualmente en la funcion index -->
                                                     <!-- Llamado de campos de los datos que queremos mostrar  -->
                                                     <td><?= $tablero->id_tablero ?></td>
 
-                                                    <td><?= $tablero->nombre_tablero ?></td>
+                                                    <td>Tareas</td>
 
                                                     <td><?= $tablero->fecha_creacion ?></td>
 
-                                                    <td><?= $tablero->descripcion_estado ?></td>
+                                                    <td>En curso</td>
 
 
                                                     <td>
@@ -211,8 +211,8 @@ parte de nuestro modelo igualmente en la funcion index -->
 
                                                             <ul class="dropdown-menu">
 
-                                                                <li> <a href="<?php echo base_url(); ?>index.php/tareas/listarTareas" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="right" title="Asignar lista de tareas"><span class="material-icons">contact_page</span></a></li>
-                                                                <li> <a href="<?php echo base_url(); ?>index.php/tareas/listarTareas" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="right" title="Asignar lista de actividades"><span class="material-icons">contact_page</span></a></li>
+                                                                <li> <a href="<?php echo base_url(); ?>index.php/tareas/listarTareas" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="right" title="Asignar lista de tareas"><span class="material-icons">notes</span></a></li>
+                                                                <li> <a href="<?php echo base_url(); ?>index.php/tareas/asignarTareaUsuario" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="right" title="Asignar tarea"><span class="material-icons">contact_page</span></a></li>
                                                             </ul>
 
 
