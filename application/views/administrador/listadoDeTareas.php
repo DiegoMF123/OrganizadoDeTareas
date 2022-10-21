@@ -287,9 +287,9 @@
                                    <br>
                                    <br>
                                     <div id="demo-external-events">
-                                       <!-- <div class="fc-event">Tarea 1</div>-->
-                                        <!--<div class="fc-event">Tarea 2</div> -->
-                                        <!--<div class="fc-event">Tarea 3</div> -->
+                                       <div class="fc-event">Tarea 1</div>
+                                        <div class="fc-event">Tarea 2</div> 
+                                        <div class="fc-event">Tarea 3</div>
                                         
                                         <hr>
                                       

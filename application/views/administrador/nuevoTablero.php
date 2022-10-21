@@ -8,21 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuevo tablero</title>
     <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/img/Ico2.ico">
+
     <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,400" rel="stylesheet">
+
     <link href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="<?php echo base_url(); ?>/assets/css/style.css" rel="stylesheet">
-    <script language="JavaScript" type="text/javascript" src="<?php echo base_url(); ?>assets/js/validarTablero.js">
-    </script>
+
     <link href="<?php echo base_url(); ?>/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
     <link href="<?php echo base_url(); ?>/assets/plugins/switchery/switchery.min.css" rel="stylesheet">
+
     <link href="<?php echo base_url(); ?>/assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+
     <link href="<?php echo base_url(); ?>/assets/plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/plugins/pace/pace.min.css" rel="stylesheet">
     <script src="<?php echo base_url(); ?>/assets/plugins/pace/pace.min.js"></script>
-   
+    <script src="<?php echo base_url(); ?>/assets/js/jquery.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="<?php echo base_url(); ?>assets/js/tableroValidar.js">
+    </script>
+    <link href="<?php echo base_url(); ?>assets/css/est.css" rel="stylesheet">
+    <script src="<?php echo base_url(); ?>assets/js/sweetalert2.all.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/sweetalert2.min.css">
+
+
 
     <!-- scropt para Dar color a la tabla en la parte de los encabezados -->
     <style type="text/css">
@@ -33,6 +47,29 @@
 
         }
     </style>
+
+    <script type="text/javascript">
+        function confirmar() {
+            event.preventDefault();
+
+            Swal.fire({
+                title: '¿Está seguro que desea crear un nuevo tablero?',
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Si',
+                cancelButtonText: "No",
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+            }).then((result) => {
+                if (result.value) {
+                    document.registrationForm.submit();
+
+
+                }
+                return false;
+            })
+        }
+    </script>
 
 
 </head>
@@ -148,7 +185,7 @@
                                                     </div>";
                                     } ?>
 
-                                    <form id="registrationForm" name="registrationForm" class="form-horizontal" action="guardar" method="GET">
+                                    <form id="registrationForm" name="registrationForm" class="form-horizontal" action="guardar" method="GET" onsubmit="return confirmar()">
 
 
 
@@ -405,7 +442,9 @@
     <script src="<?php echo base_url(); ?>/assets/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
 
 
-    <script src="<?php echo base_url(); ?>/assets/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+    <script src="<?php echo base_url(); ?>/assets/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js">
+    </script>
+
 
     <script src="<?php echo base_url(); ?>/assets/plugins/screenfull/screenfull.js"></script>
 

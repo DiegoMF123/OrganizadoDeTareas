@@ -579,13 +579,8 @@
                         </li>
                     </ul>
                 </div>
-                <!-- Visible when footer positions are static -->
-                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                <div class="hide-fixed pull-right pad-rgt">Currently v2.2</div>
-                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                <!-- Remove the class name "show-fixed" and "hide-fixed" to make the content always appears. -->
-                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                <p class="pad-lft">&#0169; 2015 Your Company</p>
+                <div class="hide-fixed pull-right pad-rgt">Actualmente v1.0</div>
+            <p class="pad-lft">&#0169; 2022 Sistema Organizador de tareas "BoardApp S.A"</p>
             </footer>
             <!--===================================================-->
             <!-- END FOOTER -->

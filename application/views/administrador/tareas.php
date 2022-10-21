@@ -166,7 +166,7 @@
 
                                                 <th>DESCRIPCIÓN TAREA</th>
 
-                                                <th>FECHA CREACIÓN</th>
+                                                <th>FECHA Y HORA CREACIÓN</th>
 
                                                 <th>ESTADO</th>
 
