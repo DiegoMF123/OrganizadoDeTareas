@@ -34,6 +34,7 @@
     <script src="<?php echo base_url(); ?>assets/js/sweetalert2.min.js"></script>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/sweetalert2.min.css">
 
+
     <!--Script para poder cancelar el ingreso de los datos y dejarlos a como estaba-->
     <script>
         function limpiarFormulario() {
@@ -201,7 +202,7 @@
                                                     <label class="col-md-1 col-xs-12 control-label">Usuario</label>
                                                     <div class="col-md-3 col-xs-12">
 
-                                                        <input type="text" class="form-control" name="usuario" id="usuariodos" placeholder="Ingrese Usuario" required />
+                                                        <input type="text" class="form-control" name="usuariodos" id="usuariodos" placeholder="Ingrese Usuario" required />
 
                                                     </div>
 

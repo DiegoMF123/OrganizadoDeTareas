@@ -185,7 +185,7 @@
 
                                                 <th>NOMBRE TABLERO</th>
 
-                                                <th>FECHA CREACIÓN</th>
+                                                <th>FECHA Y HORA DE CREACIÓN</th>
 
                                                 <th>ESTADO</th>
 

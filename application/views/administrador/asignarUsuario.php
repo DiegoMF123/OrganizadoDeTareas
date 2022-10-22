@@ -435,6 +435,41 @@
                                                     </div>
                                                 </td>
                                             </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="media-object">
+                                                        <img src="<?php echo base_url(); ?>/assets/img/Diego Mijangos.jpeg" alt="" class="img-rounded img-sm">
+                                                    </div>
+                                                </td>
+                                                <td>Diego Mijangos</td>
+                                                <td>Desarrollador</td>
+                                                <td>Tarea 3</td>
+                                                <td><span class="label label-table label-success">100%</span></td>
+                                                <td>2022-10-15 al 2022-10-16</td>
+                                                <td><span class="label label-table label-success">Finalizado</span></td>
+                                                <td>
+
+
+                                                    <div class="btn-group dropup">
+                                                        <button type="button" class="btn btn-primary">
+                                                            Opciones</button>
+
+                                                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Desplegar menú</span>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu">
+
+                                                            <li> <a href="<?php echo base_url(); ?>index.php/tareas/cambiosEstado" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="right" title="Cambiar estado y porcentaje"><span class="material-icons">notes</span></a></li>
+                                                            <li> <a href="<?php echo base_url(); ?>index.php/tareas/comentarios" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="right" title="Agregar comentario"><span class="material-icons">notes</span></a></li>
+                                                        </ul>
+
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
 
 
                                         </tbody>

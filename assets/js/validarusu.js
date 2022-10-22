@@ -5,18 +5,46 @@ $(document).ready(function(){
         var errores = '';
 
 
-        if( $('#usuario').val() == '' ){
-            errores += '<p>Seleccione un usuario para asignación</p>';
-            $('#usuario').css("border-bottom-color", "#F14B4B")
+        if( $('#nombre').val() == '' ){
+            errores += '<p>Ingrese un nombre</p>';
+            $('#nombre').css("border-bottom-color", "#F14B4B")
         } else{
-            $('#usuario').css("border-bottom-color", "#d1d1d1")
+            $('#nombre').css("border-bottom-color", "#d1d1d1")
         }
 
-        if( $('#asignarTarea').val() == '' ){
-            errores += '<p>Seleccione una tarea ha asignar</p>';
-            $('#asignarTarea').css("border-bottom-color", "#F14B4B")
+        if( $('#usuariodos').val() == '' ){
+            errores += '<p>Ingrese un nombre de usuario</p>';
+            $('#usuariodos').css("border-bottom-color", "#F14B4B")
         } else{
-            $('#asignarTarea').css("border-bottom-color", "#d1d1d1")
+            $('#usuariodos').css("border-bottom-color", "#d1d1d1")
+        }
+
+        if( $('#password').val() == '' ){
+            errores += '<p>Ingrese una contraseña</p>';
+            $('#password').css("border-bottom-color", "#F14B4B")
+        } else{
+            $('#password').css("border-bottom-color", "#d1d1d1")
+        }
+
+        if( $('#correo').val() == '' ){
+            errores += '<p>Ingrese un correo electrónico</p>';
+            $('#correo').css("border-bottom-color", "#F14B4B")
+        } else{
+            $('#correo').css("border-bottom-color", "#d1d1d1")
+        }
+
+        if( $('#cofirmarusername').val() == '' ){
+            errores += '<p>Ingrese un correo electrónico</p>';
+            $('#cofirmarusername').css("border-bottom-color", "#F14B4B")
+        } else{
+            $('#cofirmarusername').css("border-bottom-color", "#d1d1d1")
+        }
+
+        if( $('#confirmarpassword').val() == '' ){
+            errores += '<p>Ingrese un correo electrónico</p>';
+            $('#confirmarpassword').css("border-bottom-color", "#F14B4B")
+        } else{
+            $('#confirmarpassword').css("border-bottom-color", "#d1d1d1")
         }
 
 

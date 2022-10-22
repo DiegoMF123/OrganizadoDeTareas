@@ -61,7 +61,7 @@ class Users extends CI_Controller
         $this->load->view('nuevoUsuario', $data);
     }
 
-   
+
 
     // Función para guardar los datos del formulario de la vista nuevoasusu
     public function guardardos()
@@ -77,7 +77,11 @@ class Users extends CI_Controller
         $correo = trim($_REQUEST["correo"]);
         // si se cumple la funicón para poder guardar los datos, mandamos los respectivos  datos
         if (empty($usuario)) {
-            header("Location: http://127.0.0.1:8888/OrganizadoDeTareas");
+            $data["guardar"] = $this->model_user->guardar($nombre, $usuario, $password, $correo);
+            $this->send($correo);
+            // El header es para poder decirle que si se ejecuta lo anterior cambia la url y le agrega la variable respose 1 que
+            // es el mensaje de exito que se insertaron los datos
+            header("Location: http://127.0.0.1:8888/OrganizadoDeTareas/index.php/users/nuevos?response=1");
             die();
         } else {
 
@@ -96,13 +100,13 @@ class Users extends CI_Controller
         /* ================================================= */
         $config = array(
             'protocol' => 'smtp',
-			'smtp_host' => 'ssl://smtp.gmail.com',
-			'smtp_port' => 465,
-			'smtp_user' => 'diegisseb@gmail.com',
-			'smtp_pass' => 'bciswelwulsyjqmk',
-			'mailtype' => 'html',
-			'charset' => 'utf-8',
-			'newline' => "\r\n"
+            'smtp_host' => 'ssl://smtp.gmail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'diegisseb@gmail.com',
+            'smtp_pass' => 'bciswelwulsyjqmk',
+            'mailtype' => 'html',
+            'charset' => 'utf-8',
+            'newline' => "\r\n"
         );
         $this->load->library('email', $config);
         $this->load->library('parser');

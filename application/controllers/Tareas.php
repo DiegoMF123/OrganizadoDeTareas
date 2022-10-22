@@ -76,7 +76,8 @@ class Tareas extends CI_Controller
 					break;
 
 				case '2':
-					$data["datosmuestra"] = $this->Model_Muestra->datosmuestra();
+					$data["listaEstados"] = $this->model_tablero->listaEstados();
+					$data["response"]=trim(isset($_REQUEST["response"]));
 					$this->load->view('administrador/crearTarea', $data);
 					break;
 
