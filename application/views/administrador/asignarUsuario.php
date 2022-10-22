@@ -289,7 +289,7 @@
                                                 <th data-hide="phone, tablet">Rol</th>
                                                 <th data-hide="phone, tablet">Tarea asginada</th>
                                                 <th data-hide="phone, tablet">Porcentaje de avance</th>
-                                                <th data-hide="phone, tablet">Fecha</th>
+                                                <th data-hide="phone, tablet">Fecha y hora de asignación</th>
                                                 <th data-hide="phone, tablet">Estado</th>
                                                 <th data-hide="phone, tablet">Opciones</th>
                                             </tr>
@@ -304,7 +304,7 @@
                                                 <td>Diego Mijangos</td>
                                                 <td>Desarrollador</td>
                                                 <td>Tarea 1</td>
-                                                <td><span class="label label-table label-success">0%</span></td>
+                                                <td><span class="label label-table label-success">20%</span></td>
                                                 <td>2022-10-15 al 2022-10-16</td>
                                                 <td><span class="label label-table label-success">En curso</span></td>
                                                 <td>
@@ -409,9 +409,9 @@
                                                 <td>Diego Mijangos</td>
                                                 <td>Desarrollador</td>
                                                 <td>Tarea 2</td>
-                                                <td><span class="label label-table label-success">0%</span></td>
+                                                <td><span class="label label-table label-success">100%</span></td>
                                                 <td>2022-10-15 al 2022-10-16</td>
-                                                <td><span class="label label-table label-success">En curso</span></td>
+                                                <td><span class="label label-table label-success">Finalziado</span></td>
                                                 <td>
 
 
@@ -442,6 +442,41 @@
                                                     </div>
                                                 </td>
                                                 <td>Diego Mijangos</td>
+                                                <td>Desarrollador</td>
+                                                <td>Tarea 3</td>
+                                                <td><span class="label label-table label-success">100%</span></td>
+                                                <td>2022-10-15 al 2022-10-16</td>
+                                                <td><span class="label label-table label-success">Finalizado</span></td>
+                                                <td>
+
+
+                                                    <div class="btn-group dropup">
+                                                        <button type="button" class="btn btn-primary">
+                                                            Opciones</button>
+
+                                                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Desplegar menú</span>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu">
+
+                                                            <li> <a href="<?php echo base_url(); ?>index.php/tareas/cambiosEstado" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="right" title="Cambiar estado y porcentaje"><span class="material-icons">notes</span></a></li>
+                                                            <li> <a href="<?php echo base_url(); ?>index.php/tareas/comentarios" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="right" title="Agregar comentario"><span class="material-icons">notes</span></a></li>
+                                                        </ul>
+
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="media-object center">
+                                                        <img src="<?php echo base_url(); ?>/assets/img/user.png" alt="" class="img-rounded img-sm">
+                                                    </div>
+                                                </td>
+                                                <td>Debora Top </td>
                                                 <td>Desarrollador</td>
                                                 <td>Tarea 3</td>
                                                 <td><span class="label label-table label-success">100%</span></td>
